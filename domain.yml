@@ -40,49 +40,50 @@ intents:
   - ask_uniform
   - ask_link_page_tuyen_sinh
   - info_exam
+  - out_of_scope
 
 responses:
   utter_greet:
   - text: "Chào bạn"
 
   utter_goodbye:
-  - text: "Tạm biệt bạn, chúc bạn có những quyết định sáng suốt cho tương lai của mình"
+  - text: "Tạm biệt bạn, chúc bạn có những quyết định sáng suốt cho tương lai của mình."
 
   utter_introduce_botself:
-  - text: "Mình là bot tự động hỗ trợ tư vấn tuyển sinh trường Đại học Sư phạm Kỹ thuật"
+  - text: "Mình là bot tự động hỗ trợ tư vấn tuyển sinh trường Đại học Sư phạm Kỹ thuật."
 
   utter_admissions_code:
-  - text: "Mã tuyển sinh là DSK"
+  - text: "Mã tuyển sinh là DSK."
 
   utter_admissions_target:
-  - text: "Chỉ tiêu tuyển sinh năm nay là 1800 chỉ tiêu "
+  - text: "Chỉ tiêu tuyển sinh năm nay là 1800 chỉ tiêu."
 
   utter_college:
-  - text: "Từ năm 2018 không có tuyển sinh cao đẳng nha bạn"
+  - text: "Từ năm 2018 không có tuyển sinh cao đẳng nha bạn."
 
   utter_admissions_way2:
-  - text: "Đăng ký xét tuyển sau khi có giấy chứng nhận tốt nghiệp tạm thời 2021"
+  - text: "Đăng ký xét tuyển bằng học bạ."
 
   utter_compare_way1_way2:
-  - text: "Hai cách này khác nhau, bạn có thể tham khảo thêm trên fanpage của trường nha bạn"
+  - text: "Hai cách này khác nhau, bạn có thể tham khảo thêm trên fanpage của trường nha bạ."
   
   utter_admissions_by_school_profile:
-  - text: "Trường có tuyển bằng học bạ nha bạn"
+  - text: "Trường có tuyển bằng học bạ nha bạn."
 
   utter_hold_an_exam:
-  - text: "Trường không có tổ chức kỳ thi riêng nha bạn"
+  - text: "Trường không có tổ chức kỳ thi riêng nha bạn."
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
   utter_admissions_online:
-  - text: "ĐH SPKT có phiếu đăng ký online nha bạn"
+  - text: "ĐH SPKT có phiếu đăng ký online nha bạn."
 
   utter_dormitory:
-  - text: "Trường có ký túc xá ngay cạnh trường nha bạn"
+  - text: "Trường có ký túc xá ngay cạnh trường nha bạn."
 
   utter_student_support:
-  - text: "ĐH SPKT có chính sách hỗ trợ sinh viên có hoàn cảnh khó khăn \n và có học bổng hỗ trợ cho sinh viên khó khăn nha bạn nha bạn"
+  - text: "ĐH SPKT có nhiều chính sách hỗ trợ sinh viên có hoàn cảnh khó khăn và có nhiều loại học bổng khác nhau để hỗ trợ cho sinh viên khó khăn và sinh viên xuất sắc nha bạn."
 
   utter_xet_hoc_ba:
   - text: "ĐH SPKT có xét tuyển học bạ nha bạn"
@@ -123,24 +124,25 @@ responses:
 
   utter_how_to_apply:
   - text: "Bạn có thể nộp trực tiếp hoặc gửi bưu điện về địa chỉ 48 Cao Thắng, Thanh Bình, Hải Châu, Đà Nẵng."
-
-  utter_unclear:
-  - text: "Hiện tại mình vẫn chưa hiểu được ý của bạn để trả lời, mình sẽ trả lời bạn sau nhé"
+  
+  utter_out_of_scope:
+  - text: "Hiện tại mình vẫn chưa hiểu được ý của bạn để trả lời."
 
 
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
 
 actions:
+  - action_name
   - act_admision_hotline_web
   - to_roi
   - more_infor_way1
   - way1
   - more_infor_way2
-  - way2_img1
-  - way2_img2
-  - way2_img3
+  - way2_front
+  - way2_back
+  - way2_backback
   - more_infor_way3
   - way3
   - more_infor_way4
@@ -157,8 +159,7 @@ actions:
   - goodbye
   - info_exam
   - utter_iamabot
-
-  
+  - utter_out_of_scope
 entities:
   - location
   - facility_type

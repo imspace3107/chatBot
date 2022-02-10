@@ -53,17 +53,14 @@ stories:
   - intent: ask_admissions_way1
   - action: way1
   - action: more_infor_way1
-  - action: act_admission_ways
+  
 
-- story: ask admissions way2
+- story: ask admissions way 2
   steps:
   - intent: ask_admissions_way2
-  - action: utter_admissions_way2
-  - action: way2_img1
-  - action: way2_img2
-  - action: way2_img3
-  - action: more_infor_way2
-  - action: act_admission_ways
+  - action: way2_front
+  - action: way2_back
+  
 
 - story: ask admissions code
   steps:
@@ -75,21 +72,21 @@ stories:
   steps:
   - intent: compare_way1_way2
   - action: utter_compare_way1_way2
-  - action: act_admission_ways   
+    
 
 - story: ask admissions way3
   steps:
   - intent: ask_admissions_way3
   - action: way3
   - action: more_infor_way3
-  - action: act_admission_ways
+  
 
 - story: ask admissions way4
   steps:
   - intent: ask_admissions_way4
   - action: way4
   - action: more_infor_way4
-  - action: act_admission_ways
+  
 
 - story: ask have admissions by school profile
   steps:
@@ -101,7 +98,7 @@ stories:
   steps:
   - intent: ask_have_hold_an_exam
   - action: utter_hold_an_exam
-  - action: act_admission_ways
+  
 
 - story: ask admissions online
   steps:
@@ -134,14 +131,13 @@ stories:
 - story: ask fanpage link
   steps:
   - intent: ask_link_page_tuyen_sinh
-  - action: link_fanpage
+  - action: link_fanpage  
   
 
 - story: ask student support
   steps:
   - intent: ask_student_support
   - action: utter_student_support
-  - action: to_roi
 
 - story: ask phone number
   steps:

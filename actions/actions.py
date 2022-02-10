@@ -10,6 +10,7 @@
 from typing import Any, Text, Dict, List
 import json
 from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet, EventType
 from rasa_sdk.executor import CollectingDispatcher
 
 class act_admision_hotline_web(Action):
@@ -70,26 +71,28 @@ class way1(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dispatcher.utter_message(text="Tổng hợp thông tin về cách xét tuyển bằng điểm thi Tốt nghiệp THPT",
-                                image="https://scontent.fdad3-4.fna.fbcdn.net/v/t1.6435-9/152016015_3761158103969614_5621891880625288612_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=TtNSbz-CL_sAX8qzPY_&_nc_ht=scontent.fdad3-4.fna&oh=0e16681fd233f6f30d28e89456b47c23&oe=6187096F")
+                                image="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/240731119_4360627494022669_6290594941415128611_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=rI2mD_5VFYEAX-KfCl6&_nc_ht=scontent.fdad3-5.fna&oh=00_AT-vXjNW4I6C-zVy8clZ986z-tfaXqHEghMsdXKpoCwdag&oe=62043212")
 
         return []
-class way2_img1(Action):
+
+class way2_front(Action):
 
     def name(self) -> Text:
-        return "way2_img1"
+        return "way2_front"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Thông tin về cách xét tuyển bằng điểm học bạ",
+        dispatcher.utter_message(text="Thông tin về cách xét tuyển bằng điểm HB",
                                  image="https://tuyensinh.ute.udn.vn/Upload/2021/tuyensinh2021/dthi/dthi1.JPG")
-
+        print('anh1')
         return []
-class way2_img2(Action):
+
+class way2_back(Action):
 
     def name(self) -> Text:
-        return "way2_img2"
+        return "way2_back"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -99,15 +102,15 @@ class way2_img2(Action):
 
         return []
 
-
-class way2_img3(Action):
+class way2_backback(Action):
 
     def name(self) -> Text:
-        return "way2_img3"
+        return "way2_backback"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
         dispatcher.utter_message(image="https://tuyensinh.ute.udn.vn/Upload/2021/tuyensinh2021/dthi/dthi3.JPG")
 
         return []
@@ -122,14 +125,14 @@ class more_infor_way2(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         button = {
-            "type": "web_url",
+           "type": "web_url",
             "url": "https://tuyensinh.ute.udn.vn/default.html",
             "title": "Thông tin tuyển sinh"
         }
         ret_text = "Cổng đăng ký xét tuyển online ĐH SPKT"
         dispatcher.utter_message(text=ret_text, buttons=[button])
 
-        return []
+        return []        
 
 class way3(Action):
 
@@ -141,9 +144,9 @@ class way3(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dispatcher.utter_message(text="Thông tin về cách xét tuyển bằng Điểm kỳ thi ĐGNL ĐH Quốc gia Tp.HCM",
-                                 image="https://scontent.fdad3-3.fna.fbcdn.net/v/t1.6435-9/173192018_3913631668722256_57551823157256225_n.png?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_ohc=C55aNlhsCCIAX_NGrsZ&_nc_ht=scontent.fdad3-3.fna&oh=43d9d33d59f8fbc36b8efae161ddf849&oe=6189060E")
-
+                                 image="https://scontent.fdad3-4.fna.fbcdn.net/v/t39.30808-6/172567282_4162653060486781_2988326603000243780_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=WEBFXuU6i0QAX9yL-eO&tn=6D0kheYfi12iPl3r&_nc_ht=scontent.fdad3-4.fna&oh=00_AT_TGwHhXD-0XdQWQC7Zih3PloJTB1zItleGniVU0kd7pQ&oe=62057A6D")
         return []
+
 class more_infor_way3(Action):
 
     def name(self) -> Text:
@@ -185,6 +188,7 @@ class way4(Action):
         dispatcher.utter_message(text=ret_text, buttons=[button])
 
         return []
+
 class more_infor_way4(Action):
 
     def name(self) -> Text:
@@ -396,8 +400,7 @@ class to_roi(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         dispatcher.utter_message(text="Thông tin xét tuyển trường Đại học Sư phạm Kỹ thuật:",
-                                 image="https://scontent.fdad3-3.fna.fbcdn.net/v/t1.6435-9/182805961_3977661562319266_6556439821610810169_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=Y8ExIX_RVEMAX9NV4xE&_nc_ht=scontent.fdad3-3.fna&oh=45a69260112ee517cb072628989b0ffa&oe=61870CA1")
-
+                                 image="https://scontent.fhan5-10.fna.fbcdn.net/v/t1.6435-9/182805961_3977661562319266_6556439821610810169_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=-zWGmbBtN-sAX-Zz5uC&_nc_ht=scontent.fhan5-10.fna&oh=00_AT9B5XCo2vBL1rJZINpfFgmXpCKRis5feU-NYSpB9Y659g&oe=622540A1")
         return []
 
 class basic_infor_about_ute_university(Action):

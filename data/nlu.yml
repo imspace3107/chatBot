@@ -28,6 +28,7 @@ nlu:
     - cảm ơn
     - thanks
     - thank you
+    - hẹn gặp lại 
 
 - intent: needhelp
   examples: |
@@ -49,6 +50,8 @@ nlu:
 
 - intent: ask_admissions
   examples: |
+    - phuog thuc xet tuyen
+    - phương thức xét tuyển
     - các cách xét tuyển
     - các cách xt
     - cách xét tuyển
@@ -57,6 +60,11 @@ nlu:
     - cho em xin thông tin về cách xét tuyển năm nay
     - năm nay xét tuyển thế nào
     - cách xét tuyển năm nay thế nào
+    - năm nay tuyển sinh sao ạ
+    - nam nay tuyen sinh sao a
+    - nam nay xet tuyen sao ạ
+    - xet tuyen nam nay
+    - tuyển sinh nam nay
     - năm nay xét tuyển ra sao ạ
     - hình thức xét tuyển 2021
     - các cách xét tuyển 2021
@@ -170,6 +178,8 @@ nlu:
     - Điểm thi TN THPT
     - phương thức 1
     - phuong thuc 1
+    - cách xét tuyển thứ 1
+    - cách xét tuyển thứ nhất
     - cách thứ nhất
     - điểm thi tốt nghiệp
     - diem thi tot nghiep
@@ -178,23 +188,24 @@ nlu:
 
 - intent: ask_admissions_way2
   examples: |
+    - cách xét tuyển học bạ
+    - xét tuyển học bạ
+    - xét học bạ
+    - xét tuyển bằng điểm học bạ
     - cách xét tuyển thứ hai là thế nào
     - tuyển sinh cách 2 là sao
-    - xét bằng điểm tốt nghiệp THPT là như thế nào
-    - giải thích giúp e cụ thể cách 2 với
-    - điểm xét tốt nghiệp THPT là sao ạ
-    - Điểm xét tốt nghiệp THPT
     - cách tuyển sinh 2
     - cách tuyển sinh thứ hai
+    - xét học bạ
+    - điểm xét học bạ
     - cách xét tuyển 2
+    - cách thứ 2
     - cách xét tuyển thứ hai
     - Điểm xét THPT Quốc gia năm 2021
     - điểm xét TN THPT
     - phương thức 2
     - phuong thuc 2
     - cách thứ hai
-    - điểm xét tốt nghiệp
-    - diem xet tot nghiep
     - cach tuyen sinh thu hai
     - cach tuyen sinh 2
 
@@ -418,6 +429,15 @@ nlu:
 
 - intent: ask_student_support
   examples: | 
+    - trường mình có những loại học bổng nào dành cho sv vậy ạ
+    - trường mình có học bổng cho sinh viên nào
+    - học bổng hỗ trợ sinh viên
+    - trường có học bổng không ạ
+    - học bổng
+    - hoc bong
+    - học bổng sao
+    - truong co chuong trinh hoc bong khong
+    - hoc bong hoc tap 
     - trường có chính sách hỗ trợ gì cho sinh viên ko
     - các chính sách hỗ trợ sv
     - hỗ trợ sv như thế nào ạ
@@ -475,11 +495,16 @@ nlu:
     - ai đang trả lời vậy
     - cho hỏi ai bên kia vậy
     - ai đang nhắn tin vậy?
-    - ủa ai đang trả lời lại vậy
+    - ủa ai đang trả lời vậy
     - ai đang rep vậy
 
 - intent: university_address
   examples: |  
+    - Trường mình địa chỉ ở đâu vậy admin
+    - địa chỉ trường
+    - địa chỉ
+    - trường ở đường nào
+    - truong minh dia chi o dau
     - địa chỉ của trường là gì
     - trường địa chỉ ở đâu
     - đh sư phạm kỹ thuật có địa chỉ là gì
@@ -551,6 +576,10 @@ nlu:
 
 - intent: time_to_study
   examples: |  
+    - thoi gian dao tao cua truong la bao lau
+    - thời gian đào tạo của trường là bao lâu
+    - thời gian đào tạo
+    - thoi gian dao tao
     - thời gian đào tạo của đại học là bao lâu
     - tg đào tạo bậc đh là bao lâu
     - đào tạo đại học mấy năm

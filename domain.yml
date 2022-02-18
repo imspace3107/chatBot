@@ -79,12 +79,6 @@ responses:
   utter_admissions_online:
   - text: "ĐH SPKT có phiếu đăng ký online nha bạn."
 
-  utter_dormitory:
-  - text: "Trường có ký túc xá ngay cạnh trường nha bạn."
-
-  utter_student_support:
-  - text: "ĐH SPKT có nhiều chính sách hỗ trợ sinh viên có hoàn cảnh khó khăn và có nhiều loại học bổng khác nhau để hỗ trợ cho sinh viên khó khăn và sinh viên xuất sắc nha bạn."
-
   utter_xet_hoc_ba:
   - text: "ĐH SPKT có xét tuyển học bạ nha bạn"
 
@@ -100,9 +94,6 @@ responses:
 
   utter_dh_chinh_quy:
   - text: "Đại học Sư phạm Kỹ thuật là trường đào tạo hệ chính quy"
-
-  utter_fee:
-  - text: "ĐH Sư phạm Kỹ thuật là trường đại học công lập, học phí khoảng 5-6 triệu đồng/học kỳ."
 
   utter_time_to_study:
   - text: "Theo kế hoạch học trong 4 năm, tuy nhiên, Nhà trường tổ chức đào tạo theo hình thức tín chỉ nên SV có thể rút ngắn thời gian học bằng cách đăng ký học vượt; hoặc tùy thuộc vào điều kiện hoàn cảnh bản thân mà có thể kéo dài thời gian học hơn 4 năm nhưng không quá 8 năm."
@@ -134,6 +125,9 @@ session_config:
   carry_over_slots_to_new_session: false
 
 actions:
+  - action_student_support
+  - action_fee
+  - action_have_domitory
   - action_name
   - act_admision_hotline_web
   - to_roi
@@ -160,6 +154,7 @@ actions:
   - info_exam
   - utter_iamabot
   - utter_out_of_scope
+  
 entities:
   - location
   - facility_type

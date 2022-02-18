@@ -13,8 +13,6 @@ nlu:
     - chào bot
     - chào ad
     - cho em hỏi này với
-    - Tôi có câu hỏi. Bạn có thể trợ giúp không?
-    - Có ai chat được bây giờ không?
 
 - intent: goodbye
   examples: |

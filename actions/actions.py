@@ -458,3 +458,65 @@ class info_exam(Action):
                                  image="https://hoigiasudanang.com/wp-content/uploads/2021/06/2.-Moc-Thoi-gian-1536x1087.jpg")
 
         return []
+
+class action_fee(Action):
+
+    def name(self) -> Text:
+        return "action_fee"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        button = {
+            "type": "web_url",
+            "url": "http://sotaysinhvien.ute.udn.vn/ChuyenMucs/hoc-phi_52.html",
+            "title": "Thông tin học phí"
+        }
+        ret_text = "ĐH Sư phạm Kỹ thuật là trường đại học công lập, học phí khoảng 5-6 triệu đồng/học kỳ. Bạn có thể tham khảo thêm thông tin về học phí tại đây"
+        dispatcher.utter_message(text=ret_text, buttons=[button])
+
+        return []
+
+class act_have_domitory(Action):
+
+    def name(self) -> Text:
+        return "action_have_domitory"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        button = {
+            "type": "web_url",
+            "url": "http://sotaysinhvien.ute.udn.vn/ChuyenMucs/Ky-tuc-xa_34.html",
+            "title": "Các thông tin về KTX"
+        }
+        ret_text = "Trường có KTX ngay cạnh trường và dưới đây là thông tin về KTX của trường nha."
+        dispatcher.utter_message(text=ret_text, buttons=[button])
+
+        return []  
+
+class action_student_support(Action):
+
+    def name(self) -> Text:
+        return "action_student_support"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        button = {
+            "type": "web_url",
+            "url": "http://sotaysinhvien.ute.udn.vn/ChuyenMucs/Hoc-bong_33.html",
+            "title": "Thông tin học bổng"
+        }
+        button1 = {
+            "type": "web_url",
+            "url": "http://sotaysinhvien.ute.udn.vn/ChuyenMucs/Mien-giam-hoc-phi_37.html",
+            "title": "Thông tin miễn giảm học phí"
+        }
+        ret_text = "ĐH SPKT có nhiều chính sách hỗ trợ sinh viên có hoàn cảnh khó khăn và có nhiều loại học bổng khác nhau để hỗ trợ cho sinh viên khó khăn và sinh viên xuất sắc nha bạn."
+        dispatcher.utter_message(text=ret_text, buttons=[button, button1])
+
+        return []

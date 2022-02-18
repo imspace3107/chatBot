@@ -137,7 +137,7 @@ stories:
 - story: ask student support
   steps:
   - intent: ask_student_support
-  - action: utter_student_support
+  - action: action_student_support
 
 - story: ask phone number
   steps:
@@ -164,8 +164,7 @@ stories:
 - story: have domitory
   steps:
   - intent: ask_have_domitory
-  - action: utter_dormitory
-  - action: basic_infor_about_ute_university
+  - action: action_have_domitory
 
 - story: ask study time
   steps:
@@ -223,4 +222,4 @@ stories:
 - story: ask fee
   steps:
   - intent: ask_fee
-  - action: utter_fee
+  - action: action_fee

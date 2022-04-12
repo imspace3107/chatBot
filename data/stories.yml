@@ -150,11 +150,6 @@ stories:
   - action: utter_remember_time
   - action: link_fanpage
 
-- story: bot challenge
-  steps:
-  - intent: bot_challenge
-  - action: utter_introduce_botself
-
 - story: university address
   steps:
   - intent: university_address

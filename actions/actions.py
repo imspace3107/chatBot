@@ -164,7 +164,7 @@ class more_infor_way3(Action):
         button1 = {
             "type": "web_url",
             "url": "https://tuyensinh.ute.udn.vn/",
-            "title": "Đk Online ĐH Sư phạm Kỹ thuật"
+            "title": "ĐK Online ĐH Sư phạm Kỹ thuật"
         }
         ret_text = "Link thông tin về kỳ thi đánh giá năng lực ĐHQG-HCM"
         dispatcher.utter_message(text=ret_text, buttons=[button, button1])

@@ -3,7 +3,6 @@ version: "2.0"
 intents:
   - greet
   - goodbye
-  - bot_challenge
   - needhelp
   - ask_admissions
   - ask_admissions_code
@@ -72,9 +71,6 @@ responses:
 
   utter_hold_an_exam:
   - text: "Trường không có tổ chức kỳ thi riêng nha bạn."
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
 
   utter_admissions_online:
   - text: "ĐH SPKT có phiếu đăng ký online nha bạn."
@@ -152,7 +148,6 @@ actions:
   - basic_infor_about_ute_university
   - goodbye
   - info_exam
-  - utter_iamabot
   - utter_out_of_scope
   
 entities:

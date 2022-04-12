@@ -5,6 +5,8 @@ nlu:
   examples: |
     - hello
     - hi
+    - hí ae
+    - chào ạ
     - hey there
     - xin chào
     - xin chao
@@ -482,19 +484,6 @@ nlu:
     - thoi gian tuyen sinh
     - cac moc thoi gian dk xet tuyen
     - ket qua thi co khi nao  
-
-- intent: bot_challenge
-  examples: |  
-    - bạn là ai?
-    - ai dang tra loi vay
-    - ai dang rep v
-    - ai dang tl vay
-    - bạn có phải con người ko?
-    - ai đang trả lời vậy
-    - cho hỏi ai bên kia vậy
-    - ai đang nhắn tin vậy?
-    - ủa ai đang trả lời vậy
-    - ai đang rep vậy
 
 - intent: university_address
   examples: |  
